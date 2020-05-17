@@ -2,5 +2,10 @@ package AppInit
 
 const (
 	HTTP_METHOD_GET="GET"
-	SERVER_ADDRESS=":8080"
+	HTTP_METHOD_POST="POST"
+
+)
+
+var(
+	SERVER_ADDRESS=":8090"
 )

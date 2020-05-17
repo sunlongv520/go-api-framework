@@ -1,20 +1,18 @@
 package AppInit
 
 import (
-	"fmt"
 	"github.com/jinzhu/gorm"
 	_ "github.com/jinzhu/gorm/dialects/mysql"
-	//_ "github.com/go-sql-driver/mysql"
 	"log"
 )
 
 var db *gorm.DB
 func init() {
 	var err error
-	db, err = gorm.Open("mysql", "root:123456@tcp(192.168.1.188:3307)/test?charset=utf8mb4&parseTime=True&loc=Local")
+	db, err = gorm.Open("mysql", "root:root@tcp(192.168.1.101:3306)/test?charset=utf8&parseTime=True&loc=Local")
 	db.SingularTable(true)
 	if err != nil {
-		fmt.Println(err)
+		//fmt.Println(err)
 		log.Fatal(err)
 	}
 
